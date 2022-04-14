@@ -8,17 +8,56 @@
     tools:context=".MainActivity">
 
     <EditText
-        android:id="@+id/cost_of_service"
+        android:id="@+id/custo_servico"
         android:layout_height="wrap_content"
-        android:layout_width="16dp"
+        android:layout_width="160dp"
+        android:inputType="numberDecimal"
+        android:hint="Custo do serviço"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
     <TextView
+        android:id="@+id/questoes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="text"
-        android:text="Como foi o serviço?"/>
+        android:text="Como foi o serviço?"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/custo_servico"/>
+
+    <RadioGroup
+        android:id="@+id/opcoes"
+        android:checkedButton="@id/opcao_vinte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/questoes">
+
+        <RadioButton
+            android:id="@+id/opcao_vinte"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Muito bom (20%)"/>
+        <RadioButton
+            android:id="@+id/opcao_dezoito"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bom (18%)"/>
+        <RadioButton
+            android:id="@+id/opcao_quinze"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Razoável (15%)"/>
+    </RadioGroup>
+
+    <Switch
+        android:id="@+id/arredondar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Você deseja arredondar a gorjeta?"
+        app:layout_constraintTop_toBottomOf="@id/opcoes"
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
