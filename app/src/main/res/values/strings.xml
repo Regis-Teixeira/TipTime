@@ -7,5 +7,5 @@
     <string name="razo_vel_15">Razoável (15%)</string>
     <string name="voc_deseja_arredondar_a_gorjeta">Você deseja arredondar a gorjeta?</string>
     <string name="calcular">Calcular</string>
-    <string name="valor_da_gorjeta">Valor da Gorjeta</string>
+    <string name="valor_da_gorjeta">Valor da Gorjeta: %s</string>
 </resources>

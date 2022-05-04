@@ -3,6 +3,7 @@ package com.ds.tiptime
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.ds.tiptime.databinding.ActivityMainBinding
+import java.text.NumberFormat
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
@@ -22,5 +23,11 @@ class MainActivity : AppCompatActivity() {
             else -> 0.15
         }
         var gorjeta = gorjetaPorcentagem * custo
+        val arredondar = binding.arredondar.isChecked
+        if (arredondar) {
+            gorjeta = kotlin.math.ceil(gorjeta)
+        }
+        val formattedTip = NumberFormat.getCurrencyInstance() .format(gorjeta)
+        binding.resultadoGorjeta.text = getString(R.string.valor_da_gorjeta, formattedTip)
     }
 }
